@@ -1,4 +1,4 @@
-package com.maximillian.java_encapsulation;
+package com.maximillian.questions_and_answers;
 
 public class Assignment1 {
 
@@ -14,6 +14,14 @@ public class Assignment1 {
         }
         return reversed;
     }
+    public  String reverseStr(String input){
+        char[] chars = input.toCharArray();
+        String reversed = "";
+        for(int i = chars.length - 1; i >= 0; i--){
+            reversed = reversed + chars[i];
+        }
+        return reversed;
+    }
     public  void vowelCount(String input){
         String vowels = "aeiou";
         String [] arrStr = input.split("");
@@ -24,6 +32,16 @@ public class Assignment1 {
             }
         }
         System.out.println("the count of vowels ===> " + count);
+    }
+    public int vowelCount2(String input){
+        String vowels = "aeiou";
+        int count = 0;
+        for (int i = 0; i <  input.length(); i++){
+            if (vowels.contains(String.valueOf(input.charAt(i)))){
+                count++;
+            }
+        }
+        return count;
     }
     public  boolean isPalindrome(String input){
         return reverse(input).equalsIgnoreCase(input);
